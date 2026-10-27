@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mouniii ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: "Georgia", serif;
+            color: #7b1748;
+            background: linear-gradient(135deg,
+                    #ffe0ec,
+                    #fff0f5,
+                    #ffc4d6,
+                    #ffe6ee);
+            background-size: 300% 300%;
+            animation: backgroundGlow 12s ease infinite;
+        }
+
+        @keyframes backgroundGlow {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Romantic background decorations */
+
+        .decoration {
+            position: fixed;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .teddy-left {
+            left: 3%;
+            bottom: 7%;
+            font-size: clamp(55px, 10vw, 115px);
+        }
+
+        .teddy-right {
+            right: 3%;
+            bottom: 7%;
+            font-size: clamp(55px, 10vw, 115px);
+            animation-delay: 1.5s;
+        }
+
+        .bg-heart {
+            top: 12%;
+            left: 8%;
+            font-size: 35px;
+        }
+
+        .bg-heart2 {
+            top: 18%;
+            right: 9%;
+            font-size: 42px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(5deg);
+            }
+        }
+
+        /* Falling rose petals */
+
+        .petal {
+            position: fixed;
+            top: -40px;
+            z-index: 5;
+            pointer-events: none;
+            animation: fall linear infinite;
+            opacity: 0.85;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-5vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.9;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(650deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main birthday card */
+
+        .container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 16px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+            padding: clamp(25px, 6vw, 55px) clamp(18px, 5vw, 45px);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 15px 60px rgba(174, 39, 94, 0.20);
+            backdrop-filter: blur(9px);
+            animation: cardAppear 1.5s ease;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .top-label {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #bd527b;
+            margin-bottom: 20px;
+        }
+
+        .crown {
+            font-size: clamp(35px, 8vw, 55px);
+            margin-bottom: 5px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: clamp(38px, 9vw, 72px);
+            line-height: 1.15;
+            color: #c2185b;
+            text-shadow: 2px 3px 0 #ffe0ec;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.72em;
+            margin-top: 8px;
+            color: #e75480;
+        }
+
+        .subtitle {
+            font-size: clamp(17px, 4vw, 22px);
+            line-height: 1.7;
+            margin: 22px auto;
+            color: #8c3159;
+        }
+
+        .heart-divider {
+            color: #e75480;
+            font-size: 25px;
+            letter-spacing: 8px;
+            margin: 20px 0;
+            animation: heartbeat 1.4s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        /* Love quotes */
+
+        .quote-box {
+            margin: 25px 0;
+            padding: 23px 18px;
+            border-top: 1px solid #f4b4cc;
+            border-bottom: 1px solid #f4b4cc;
+        }
+
+        .quote {
+            font-size: clamp(16px, 3.8vw, 20px);
+            font-style: italic;
+            line-height: 1.8;
+            color: #94375e;
+            min-height: 60px;
+            transition: opacity 0.4s ease;
+        }
+
+        .quote-author {
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            margin-top: 12px;
+            color: #c4547c;
+        }
+
+        .love-note {
+            font-size: clamp(16px, 4vw, 19px);
+            line-height: 1.9;
+            margin: 25px auto;
+        }
+
+        .love-note strong {
+            color: #d81b60;
+        }
+
+        .signature {
+            font-size: 21px;
+            font-style: italic;
+            color: #c2185b;
+            margin-top: 25px;
+        }
+
+        .footer {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            color: #b35b7b;
+        }
+
+        button {
+            border: none;
+            border-radius: 30px;
+            padding: 14px 25px;
+            margin-top: 10px;
+            background: linear-gradient(135deg, #ed5b91, #c2185b);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 5px 18px #e9a3bd;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px #df8eae;
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 22px;
+            font-size: 19px;
+            line-height: 1.8;
+            color: #c2185b;
+            animation: cardAppear 1s ease;
+        }
+
+        /* Smaller screens */
+
+        @media (max-width: 480px) {
+            .card {
+                border-radius: 23px;
+            }
+
+            .top-label {
+                letter-spacing: 2px;
+            }
+
+            .teddy-left {
+                left: -4px;
+                bottom: 2%;
+            }
+
+            .teddy-right {
+                right: -4px;
+                bottom: 2%;
+            }
+
+            .quote-box {
+                padding: 18px 8px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+
+        /*Telugu note styling*/
+
+        .telugu-note {
+            margin: 28px 0;
+            padding: 25px 18px;
+            background: rgba(255, 228, 238, 0.65);
+            border: 1px solid #f6bfd2;
+            border-radius: 22px;
+            color: #843454;
+            font-family: "Noto Sans Telugu", "Gautami", sans-serif;
+            font-size: clamp(15px, 3.8vw, 18px);
+            line-height: 2;
+            text-align: center;
+        }
+
+        .telugu-note h2 {
+            color: #c2185b;
+            font-size: clamp(23px, 5vw, 30px);
+            margin-bottom: 20px;
+        }
+
+        .telugu-note p {
+            margin: 18px 0;
+        }
+
+        .telugu-note strong {
+            color: #c2185b;
+        }
+
+
+        /* Clickable love letter envelope and open letter */
+        .letter-envelope-wrap { margin: 28px 0; text-align: center; }
+        .letter-envelope {
+            position: relative;
+            width: min(100%, 340px);
+            min-height: 190px;
+            margin: 0 auto;
+            border: 1px solid #f3a9c2;
+            border-radius: 14px;
+            background: linear-gradient(145deg, #fff5f8, #ffc6d9);
+            box-shadow: 0 12px 28px rgba(174, 39, 94, .20);
+            cursor: pointer;
+            overflow: hidden;
+            color: #c2185b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px 16px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .letter-envelope:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(174,39,94,.26); }
+        .letter-envelope .envelope-icon { font-size: 66px; line-height: 1; }
+        .letter-envelope .envelope-label { font: bold 17px Arial, sans-serif; }
+        .letter-envelope .envelope-hint { font: 13px Arial, sans-serif; }
+        .letter-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            z-index: 9999;
+            padding: 12px;
+            background: rgba(91, 22, 53, .58);
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .letter-modal.open { display: flex; }
+        .letter-paper {
+            position: relative;
+            width: min(100%, 620px);
+            height: auto;
+            max-height: calc(100vh - 24px);
+            max-height: calc(100dvh - 24px);
+            min-height: 0;
+            flex: 0 1 auto;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
+            padding: 32px clamp(18px, 5vw, 38px);
+            border: 2px solid #f6bfd2;
+            border-radius: 22px;
+            background: linear-gradient(145deg, #fffafc, #ffe5ee);
+            box-shadow: 0 20px 65px rgba(50, 0, 25, .30);
+            color: #843454;
+            font-family: "Noto Sans Telugu", "Gautami", sans-serif;
+            font-size: clamp(15px, 3.8vw, 18px);
+            line-height: 2;
+            text-align: center;
+            animation: cardAppear .45s ease;
+        }
+        .letter-paper h2 { color: #c2185b; font-size: clamp(23px, 5vw, 30px); margin: 8px 0 20px; }
+        .letter-paper p { margin: 18px 0; }
+        .letter-paper strong { color: #c2185b; }
+        .letter-close {
+            position: sticky;
+            top: 0;
+            float: right;
+            z-index: 2;
+            margin: -12px -8px 8px 10px;
+            padding: 5px 12px;
+            font-size: 20px;
+            line-height: 1.3;
+            border-radius: 50%;
+        }
+        @media (max-width: 480px) {
+            .letter-envelope { min-height: 165px; }
+            .letter-paper { padding: 25px 16px; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating background decorations -->
+    <div class="decoration teddy-left">🧸</div>
+    <div class="decoration teddy-right">🧸</div>
+    <div class="decoration bg-heart">💗</div>
+    <div class="decoration bg-heart2">💕</div>
+
+    <!-- Falling rose petals -->
+    <div id="petals"></div>
+
+    <main class="container">
+        <section class="card">
+
+            <div class="top-label">A Special Day for Someone Special</div>
+
+            <div class="crown">👑</div>
+
+            <h1>
+                Happy Birthday
+                <span>Mouniii ❤️</span>
+            </h1>
+
+            <p class="subtitle">
+                To the girl who makes my world<br>
+                a little brighter and a lot more beautiful. 🌸
+            </p>
+
+            <div class="heart-divider">♥ ♥ ♥</div>
+
+            <div class="quote-box">
+                <p class="quote" id="quote">
+                    "You are my favourite person,
+                    my happiest thought, and my sweetest dream."
+                </p>
+                <p class="quote-author">— A little thought from my heart 💌</p>
+            </div>
+
+            <div class="love-note">
+                Happy Birthday, my Mouniii! 🥹💕<br><br>
+
+                If I could give you one thing in this world,
+                it would be the ability to see yourself through
+                my eyes. Then you would know how truly
+                <strong>special, beautiful, and precious</strong>
+                you are to me.<br><br>
+
+                May your smile never fade, your dreams come true,
+                and your heart always find a reason to be happy.
+                And selfishly, I hope I get to be a part of
+                that happiness. 🌷
+            </div>
+
+            <div class="heart-divider">💗 💖 💗</div>
+
+            <!-- Tap the envelope to open the original Telugu love note -->
+            <div class="letter-envelope-wrap">
+                <button class="letter-envelope" type="button" onclick="openLoveLetter()" aria-label="Open love letter">
+                    <span class="envelope-icon">💌</span>
+                    <span class="envelope-label">Click to Open Love Letter</span>
+                    <span class="envelope-hint">A little message, just for you ❤️</span>
+                </button>
+            </div>
+
+            <div class="letter-modal" id="loveLetterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle" onclick="closeLoveLetterOnBackdrop(event)">
+                <div class="letter-paper">
+                    <button class="letter-close" type="button" onclick="closeLoveLetter()" aria-label="Close love letter">×</button>
+                    <h2 id="letterTitle">మౌనికా ❤️🌹</h2>
+                    <p>
+                        నువ్వు నా జీవితంలోకి వచ్చాక,<br>
+                        కొన్ని చిన్న చిన్న విషయాలు కూడా<br>
+                        ఎంతో అందంగా అనిపిస్తున్నాయి... 💗
+                    </p>
+                    <p>
+                        నీతో మాట్లాడే ప్రతి క్షణం ఒక జ్ఞాపకం,<br>
+                        నీ నవ్వు వింటే చాలు.. నా మనసుకి ఒక ఆనందం. ❤️
+                    </p>
+                    <p>
+                        నీ కలలన్నీ నిజం కావాలని,<br>
+                        నీ కళ్లలో ఆనందం ఎప్పటికీ నిలవాలని,<br>
+                        నీ జీవితంలో వచ్చే ప్రతి పుట్టినరోజుకి <br>
+                        నీ పక్కనే ఉండి నిన్ను నవ్వించాలని<br>
+                        మనస్ఫూర్తిగా కోరుకుంటున్నాను. 🧸💗
+                    </p>
+                    <p>
+                        ఈ ప్రపంచంలో నీకు ఎన్నో అందమైన బహుమతులు దొరకొచ్చు...<br>
+                        కానీ నిన్ను ఎప్పుడూ ప్రేమించే,<br>
+                        ఒక మనసు మాత్రం ఎప్పటికీ నీతోనే ఉంటుంది. ❤️
+                    </p>
+                    <p><strong>పుట్టినరోజు శుభాకాంక్షలు నా మౌనికా! 🎂❤️</strong></p>
+                </div>
+            </div>
+
+            <div class="heart-divider">🌹 💖 🌹</div>
+
+            <button onclick="showSurprise()">
+                A Little Surprise for You 🎁
+            </button>
+
+            <div id="surprise">
+                You are my favourite hello,<br>
+                my reason to smile,<br>
+                and my sweetest forever. ❤️<br><br>
+
+                <strong>Happy Birthday, Mouniii!</strong><br>
+                You deserve all the love in this universe. 🌎💕
+            </div>
+
+            <p class="signature">
+                With all my love, always. 💋
+            </p>
+
+            <div class="footer">
+                MADE WITH LOVE, JUST FOR YOU ♡
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        // Create continuously falling rose petals
+        const petalsContainer = document.getElementById("petals");
+        const petalEmojis = ["🌹", "🌸", "💗", "🌷", "❤️"];
+
+        for (let i = 0; i < 24; i++) {
+            const petal = document.createElement("div");
+            petal.className = "petal";
+            petal.textContent =
+                petalEmojis[Math.floor(Math.random() * petalEmojis.length)];
+
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.fontSize = (14 + Math.random() * 15) + "px";
+            petal.style.animationDuration = (7 + Math.random() * 9) + "s";
+            petal.style.animationDelay = (-Math.random() * 15) + "s";
+
+            petalsContainer.appendChild(petal);
+        }
+
+        // Rotating romantic quotes
+        const quotes = [
+            '"You are my favourite person, my happiest thought, and my sweetest dream. ❤️🌹"',
+            '"In every lifetime, in every universe, my heart will always find its way to you. ❤️🌹"',
+            '"If I had to choose again, I would still choose you. Every single time. ❤️🌹"',
+            '"You make ordinary moments feel like the most beautiful memories. ❤️🌹"',
+            '"My favourite place in this world is wherever you are.❤️🌹"'
+        ];
+
+        let quoteIndex = 0;
+
+        setInterval(() => {
+            const quoteElement = document.getElementById("quote");
+            quoteElement.style.opacity = 0;
+
+            setTimeout(() => {
+                quoteIndex = (quoteIndex + 1) % quotes.length;
+                quoteElement.textContent = quotes[quoteIndex];
+                quoteElement.style.opacity = 1;
+            }, 400);
+        }, 4000);
+
+
+        function openLoveLetter() {
+            const modal = document.getElementById("loveLetterModal");
+
+            // Keep the modal directly under body so transformed card styling
+            // cannot shift or clip the fixed-position letter on any screen.
+            if (modal.parentElement !== document.body) {
+                document.body.appendChild(modal);
+            }
+
+            modal.classList.add("open");
+            const paper = modal.querySelector(".letter-paper");
+            if (paper) paper.scrollTop = 0;
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLoveLetter() {
+            document.getElementById("loveLetterModal").classList.remove("open");
+            document.body.style.overflow = "";
+        }
+
+        function closeLoveLetterOnBackdrop(event) {
+            if (event.target.id === "loveLetterModal") closeLoveLetter();
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") closeLoveLetter();
+        });
+
+        // Surprise button
+        function showSurprise() {
+            const surprise = document.getElementById("surprise");
+            surprise.style.display = "block";
+
+            // Add extra hearts for the surprise
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement("div");
+                heart.className = "petal";
+                heart.textContent = "💖";
+                heart.style.left = (20 + Math.random() * 60) + "vw";
+                heart.style.fontSize = "25px";
+                heart.style.animationDuration = "4s";
+                heart.style.animationDelay = (Math.random() * 2) + "s";
+                petalsContainer.appendChild(heart);
+
+                setTimeout(() => heart.remove(), 6500);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
